@@ -1,8 +1,11 @@
 const bodyParser = require("body-parser");
 const express = require("express");
+const cors = require('cors')
 const app = express();
 
 const { GoogleGenerativeAI } = require("@google/generative-ai");
+
+app.use(cors())
 
 app.use(bodyParser.json())
 
